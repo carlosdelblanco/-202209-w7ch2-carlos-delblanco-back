@@ -22,8 +22,8 @@ export const getRobots = async (
   } catch (error: unknown) {
     const customError = new CustomError(
       (error as Error).message,
-      500,
-      "Server error"
+      "Server error",
+      500
     );
     next(customError);
   }
@@ -53,8 +53,8 @@ export const getRobotById = async (
   } catch (error: unknown) {
     const customError = new CustomError(
       (error as Error).message,
-      500,
-      "Database has problems, try again later"
+      "Database has problems, try again later",
+      500
     );
     next(customError);
   }
@@ -74,8 +74,8 @@ export const deleteRobotById = async (
   } catch (error: unknown) {
     const customError = new CustomError(
       (error as Error).message,
-      500,
-      "Database error"
+      "Database error",
+      500
     );
 
     next(customError);

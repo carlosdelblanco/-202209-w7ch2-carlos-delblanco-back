@@ -7,8 +7,12 @@ const userSchema = new Schema({
     unique: true,
   },
   password: {
-    type: string,
+    type: String,
     required: true,
-    minlength: 6,
+    minlength: 4,
   },
 });
+
+const User = model("User", userSchema, "users");
+
+export default User;
