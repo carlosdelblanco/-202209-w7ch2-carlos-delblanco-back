@@ -19,7 +19,7 @@ module.exports = {
       },
     },
     {
-      files: ["src/server/routers/robotRouters.ts"],
+      files: ["src/**/models/**/*.ts"],
       rules: { "@typescript-eslint/naming-convention": "off" },
     },
   ],
